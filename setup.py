@@ -15,7 +15,7 @@ from setuptools import setup
 
 setup(
     name = 'DefaultCc',
-    version = '0.4',
+    version = '0.5',
     packages = ['defaultcc'],
     include_package_data = True,
     author = "Jean-Guilhem Rouel",
@@ -28,7 +28,7 @@ setup(
         "CC lists can be configured per component through the component admin UI",
     license = "3-Clause BSD",
     keywords = "trac CC ticket component",
-    url = "http://trac-hacks.org/wiki/DefaultCCPlugin",
+    url = "https://trac-hacks.org/wiki/DefaultCCPlugin",
     classifiers = [
         'Framework :: Trac',
     ],
