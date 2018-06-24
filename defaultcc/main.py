@@ -29,11 +29,10 @@ class TicketDefaultCC(Component):
         pass
 
     def validate_ticket(self, req, ticket):
-        if 'preview' not in req.args and 'comment' not in req.args:
-            comp_default_cc = DefaultCC(self.env, ticket['component'])
-            if comp_default_cc and comp_default_cc.cc:
-                if ticket['cc']:
-                    ticket['cc'] += ', '
-                ticket['cc'] += comp_default_cc.cc
+        comp_default_cc = DefaultCC(self.env, ticket['component'])
+        if comp_default_cc and comp_default_cc.cc:
+            if ticket['cc']:
+                ticket['cc'] += ', '
+            ticket['cc'] += comp_default_cc.cc
 
         return []
