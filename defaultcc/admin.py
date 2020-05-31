@@ -46,7 +46,7 @@ class DefaultCCAdmin(Component):
     def environment_created(self):
         self._upgrade_db()
 
-    def environment_needs_upgrade(self, db):
+    def environment_needs_upgrade(self):
         return 'component_default_cc' not in self._get_tables()
 
     def upgrade_environment(self, db):
